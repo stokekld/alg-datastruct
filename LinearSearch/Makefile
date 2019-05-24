@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: lsearch
 
-lsearch: main.o
+lsearch: main.o lsearch.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
