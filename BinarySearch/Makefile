@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: bsearch
 
-bsearch: main.o
+bsearch: main.o bsearch.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
