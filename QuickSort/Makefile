@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: qsort
 
-qsort: main.o
+qsort: main.o qsort.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
