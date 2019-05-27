@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: bsort
 
-bsort: main.o
+bsort: main.o bsort.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
