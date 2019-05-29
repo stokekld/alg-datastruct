@@ -14,5 +14,9 @@ int main()
 
     printList(list);
 
+    deleteNode(list, 2);
+
+    printList(list);
+
     return 0;
 }
