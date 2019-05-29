@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: llist
 
-llist: main.o
+llist: main.o llist.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c

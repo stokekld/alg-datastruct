@@ -1,8 +1,18 @@
 #include <stdio.h>
 
+#include "llist.h"
+
 int main()
 {
-    printf("Hello world\n");
+    LinkedList *list = getNewList();
+
+    addNode(list, 400);
+    addNode(list, 383);
+    addNode(list, 847);
+    addNode(list, 128);
+    addNode(list, 659);
+
+    printList(list);
 
     return 0;
 }
