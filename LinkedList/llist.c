@@ -38,6 +38,37 @@ int addNode(LinkedList *ll, int value)
     return 0;
 }
 
+int deleteNode(LinkedList *ll, unsigned int index)
+{
+    if(index > (ll->size - 1))
+    	return -1;
+
+    Node *auxNode, *previous;
+    int i = 0;
+
+    auxNode = ll->first;
+
+    if(index == 0)
+    {
+	ll->first = ll->first->next;
+
+	free(auxNode);
+    }
+    else
+    {
+	while(i++ < (index - 1))
+	    auxNode = auxNode->next;
+
+	previous = auxNode;
+	auxNode = auxNode->next;
+	previous->next = auxNode->next;
+
+	free(auxNode);
+    }
+
+    return 0;
+}
+
 void printList(LinkedList *ll)
 {
 

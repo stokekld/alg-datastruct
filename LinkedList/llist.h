@@ -10,4 +10,5 @@ typedef struct t_list {
 
 LinkedList *getNewList(void);
 int addNode(LinkedList *ll, int value);
+int deleteNode(LinkedList *ll, unsigned int index);
 void printList(LinkedList *ll);
