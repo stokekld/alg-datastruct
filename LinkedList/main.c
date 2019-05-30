@@ -18,5 +18,7 @@ int main()
 
     printList(list);
 
+    deleteList(list);
+
     return 0;
 }

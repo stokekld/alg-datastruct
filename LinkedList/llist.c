@@ -66,6 +66,20 @@ int deleteNode(LinkedList *ll, unsigned int index)
 	free(auxNode);
     }
 
+    ll->size--;
+
+    return 0;
+}
+
+int deleteList(LinkedList *ll)
+{
+    int i;
+
+    for(i = 0; i < ll->size; i++)
+	deleteNode(ll, 0);
+
+    free(ll);
+
     return 0;
 }
 
