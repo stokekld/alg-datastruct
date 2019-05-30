@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: queue
 
-queue: main.o
+queue: main.o queue.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
