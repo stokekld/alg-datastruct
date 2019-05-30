@@ -4,7 +4,7 @@ CFLAGS=-Wall
 
 all: stack
 
-stack: main.o
+stack: main.o stack.o
 	$(CC) -o $@ $(CFLAGS) $^
 
 %.o: %.c
