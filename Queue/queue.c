@@ -13,3 +13,25 @@ Queue *getNewQueue(void)
 
     return newQueue;
 }
+
+void enqueue(Queue *q, int value)
+{
+    if(!q)
+	return;
+
+    Node *newNode = (Node *) malloc(sizeof(Node));
+
+    newNode->value = value;
+    newNode->next = NULL;
+
+    if(!q->size)
+    {
+	q->front = newNode;
+	q->tail = newNode;
+    }
+    else
+    {
+	q->tail->next = newNode;
+	q->tail = newNode;
+    }
+}

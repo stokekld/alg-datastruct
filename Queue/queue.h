@@ -10,3 +10,4 @@ typedef struct t_queue {
 }Queue;
 
 Queue *getNewQueue(void);
+void enqueue(Queue *q, int value);
